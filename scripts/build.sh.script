@@ -1,0 +1,12 @@
+#!/bin/bash
+
+APP_PATH=framework/base/app
+UTILS_PATH=framework/base/utils
+
+CXX=g++
+PROG_NAME=prog.exe
+
+$CXX -o $PROG_NAME -Iframework/ $APP_PATH/appbase.cpp $APP_PATH/appwin.cpp $APP_PATH/main.cpp $UTILS_PATH/strutils.cpp $UTILS_PATH/memutils.cpp
+
+#g++ -o prog.exe -Iframework/ framework/base/app/appbase.cpp framework/base/app/appwin.cpp framework/base/app/main.cpp framework/base/utils/strutils.cpp
+

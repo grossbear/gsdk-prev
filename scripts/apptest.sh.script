@@ -1,0 +1,23 @@
+#!/bin/bash
+
+APP_PATH=framework/base/app
+UTILS_PATH=framework/base/utils
+
+CXX=g++
+PROG_NAME=prog.exe
+
+cd ..
+GSDK_PATH=$(pwd)
+echo GSDK_PATH: $GSDK_PATH
+EXAMPLE_APP_PATH=examples/apptest
+
+$CXX -o $EXAMPLE_APP_PATH/$PROG_NAME -Iframework $EXAMPLE_APP_PATH/apptest.cpp $APP_PATH/appbase.cpp $APP_PATH/appwin.cpp $APP_PATH/main.cpp $UTILS_PATH/strutils.cpp $UTILS_PATH/memutils.cpp
+
+
+#$CXX -o $EXAMPLE_APP_PATH/$PROG_NAME -Iframework $EXAMPLE_APP_PATH/apptest.cpp $APP_PATH/appbase.cpp $APP_PATH/appwin.cpp $APP_PATH/main.cpp $UTILS_PATH/strutils.cpp $UTILS_PATH/memutils.cpp
+
+
+#$CXX -o $PROG_NAME -Iframework/ $APP_PATH/appbase.cpp $APP_PATH/appwin.cpp $APP_PATH/main.cpp $UTILS_PATH/strutils.cpp $UTILS_PATH/memutils.cpp
+
+#g++ -o prog.exe -Iframework/ framework/base/app/appbase.cpp framework/base/app/appwin.cpp framework/base/app/main.cpp framework/base/utils/strutils.cpp
+
